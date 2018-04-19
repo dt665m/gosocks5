@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/armon/go-socks5"
+	"github.com/dt665m/gosocks5"
 )
 
 func main() {
