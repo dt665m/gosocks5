@@ -20,6 +20,7 @@ func init() {
 	flag.StringVar(&port, "p", "8080", "socks5 listen port")
 	flag.StringVar(&login, "user", "", "socks5 username")
 	flag.StringVar(&password, "password", "", "socks5 password")
+	flag.Parse()
 }
 
 func main() {
@@ -45,7 +46,7 @@ func main() {
 	}
 
 	// Create SOCKS5 proxy on localhost port 8080
-	conf.Logger.Println("starting SOCKS5, port 8080")
+	conf.Logger.Printf("starting SOCKS5, port %s", port)
 	if err := server.ListenAndServe("tcp", ":8080"); err != nil {
 		panic(err)
 	}
