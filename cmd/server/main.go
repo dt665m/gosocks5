@@ -34,7 +34,7 @@ func main() {
 		panic(err)
 	}
 
-	conf.Logger.Printf("starting SOCKS5, port %s", port)
+	conf.Logger.Printf("SOCKS5 server started on port %s", port)
 	if err := server.ListenAndServe("tcp", ":"+port); err != nil {
 		panic(err)
 	}
