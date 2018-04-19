@@ -1,5 +1,5 @@
 
-# Work started from github.com/armon/go-socks5
+# Modified from github.com/armon/go-socks5
 
 - Tested on Go 1.10
 - A naive server is included in cmd/server

@@ -18,6 +18,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	b, err := ioutil.ReadAll(resp.Body)
+
+	b, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(b))
 }
