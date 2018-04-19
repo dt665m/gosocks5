@@ -2,9 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"log"
-	"net/http"
 	"os"
 
 	"github.com/dt665m/gosocks5"
@@ -24,15 +22,6 @@ func init() {
 }
 
 func main() {
-	go func() {
-		fmt.Println("Starting Test Server 8888")
-		mux := http.NewServeMux()
-		mux.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
-			ip := r.RemoteAddr
-			fmt.Fprintf(w, "your ip is %v", ip)
-		})
-		http.ListenAndServe(":8888", mux)
-	}()
 	conf := &socks5.Config{}
 	conf.Logger = log.New(os.Stderr, "", log.LstdFlags|log.Lshortfile)
 	if login != "" && password != "" {

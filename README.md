@@ -1,6 +1,10 @@
 
 # Work started from github.com/armon/go-socks5
 
+- Tested on Go 1.10
+- A naive server is included in cmd/server
+- net/http's client responds to HTTP_PROXY environment variable.  An example is given in cmd/testclient
+
 # Example
 ```go
 // Create a SOCKS5 server
